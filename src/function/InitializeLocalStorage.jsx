@@ -58,8 +58,6 @@ export function InitializeLocalStorage() {
 
     // chatroom창
     localStorage.setItem("chatroomBgColor", "#FFFFFF");
-    localStorage.setItem("chatroomTitleColor", "#3D3D3D");
-    localStorage.setItem("chatroomNameColor", "#3D3D3D");
 
     localStorage.setItem("chatroomReceiveBg1Color", "#FFECB4");
     localStorage.setItem("chatroomReceiveBg2Color", "#FFECB4");
@@ -76,8 +74,6 @@ export function InitializeLocalStorage() {
 
     // character-chatroom창
     localStorage.setItem("characterChatroomBgColor", "#FFFFFF");
-    localStorage.setItem("characterChatroomTitleColor", "#3D3D3D");
-    localStorage.setItem("characterChatroomNameColor", "#3D3D3D");
 
     localStorage.setItem("characterChatroomReceiveBg1Color", "#FFECB4");
     localStorage.setItem("characterChatroomReceiveBg2Color", "#FFECB4");

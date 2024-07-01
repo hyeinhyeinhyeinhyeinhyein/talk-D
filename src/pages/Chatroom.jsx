@@ -53,8 +53,6 @@ function Chatroom() {
 
 
     const [chatroomBgColor, setChatroomBgColor] = useState(localStorage.getItem("chatroomBgColor"));
-    const [chatroomTitleColor, setChatroomTitleColor] = useState(localStorage.getItem("chatroomTitleColor"));
-    const [chatroomNameColor, setChatroomNameColor] = useState(localStorage.getItem("chatroomNameColor"));
     const [chatroomReceiveBg1Color, setChatroomReceiveBg1Color] = useState(localStorage.getItem("chatroomReceiveBg1Color"));
     const [chatroomReceiveBg2Color, setChatroomReceiveBg2Color] = useState(localStorage.getItem("chatroomReceiveBg2Color"));
     const [chatroomReceiveTextColor, setChatroomReceiveTextColor] = useState(localStorage.getItem("chatroomReceiveTextColor"));
@@ -74,15 +72,6 @@ function Chatroom() {
     const handleChangeChatroomBgColor = (color) => {
         setChatroomBgColor(color.hex);
     }
-
-    const handleChangeChatroomTitleColor = (color) => {
-        setChatroomTitleColor(color.hex);
-    }
-
-    const handleChangeChatroomNameColor = (color) => {
-        setChatroomNameColor(color.hex);
-    }
-
     const handleChangeChatroomReceiveBg1Color = (color) => {
         setChatroomReceiveBg1Color(color.hex);
     }
@@ -144,8 +133,6 @@ function Chatroom() {
 
 
         localStorage.setItem("chatroomBgColor", chatroomBgColor);
-        localStorage.setItem("chatroomTitleColor", chatroomTitleColor);
-        localStorage.setItem("chatroomNameColor", chatroomNameColor);
         localStorage.setItem("chatroomReceiveTextColor", chatroomReceiveTextColor);
         localStorage.setItem("chatroomReceiveUnreadTextColor", chatroomReceiveUnreadTextColor);
         localStorage.setItem("chatroomSendTextColor", chatroomSendTextColor);
@@ -171,18 +158,6 @@ function Chatroom() {
                                 <>
                                 <div className='colorpick-info-title'>채팅방 배경 색상</div>
                                 <SketchPicker color={chatroomBgColor} onChangeComplete={handleChangeChatroomBgColor} />
-                                </>
-                            )}
-                            {activeButton === 'chatroom_title_color_set' && (
-                                <>
-                                <div className='colorpick-info-title'>채팅방 타이틀 색상</div>
-                                <SketchPicker color={chatroomTitleColor} onChangeComplete={handleChangeChatroomTitleColor} />
-                                </>
-                            )}
-                            {activeButton === 'chatroom_name_color_set' && (
-                                <>
-                                <div className='colorpick-info-title'>친구 이름 색상</div>
-                                <SketchPicker color={chatroomNameColor} onChangeComplete={handleChangeChatroomNameColor} />
                                 </>
                             )}
                             {activeButton === 'chatroom_receive_bg1_color_set' && (
@@ -247,12 +222,12 @@ function Chatroom() {
                     </div>
 
                     <div className='chatroom_title_color'>
-                        <Chatroom_title_color_cmp chatroomTitleColor={chatroomTitleColor}/>
+                        <Chatroom_title_color_cmp chatroomTitleColor="#191919"/>
                     </div>
 
 
                     <div className='chatroom_name_color'>
-                        <Chatroom_name_color_cmp chatroomNameColor={chatroomNameColor}/>
+                        <Chatroom_name_color_cmp chatroomNameColor="#6D6D6D"/>
                     </div>
 
                     <div className='chatroom_receive_bg1_color'>
@@ -295,14 +270,6 @@ function Chatroom() {
                 <div className='chatroom_setting_zone'>
                     <div className='chatroom_bg_color_set'>
                         <img onClick={(event) => toggleMenu(event, 'chatroom_bg_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'chatroom_bg_color_set' ? "/setIcon.png" : "/notSetIcon.png"} />
-                    </div>
-
-                    <div className='chatroom_title_color_set'>
-                        <img onClick={(event) => toggleMenu(event, 'chatroom_title_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'chatroom_title_color_set' ? "/setIcon.png" : "/notSetIcon.png"} />
-                    </div>
-
-                    <div className='chatroom_name_color_set'>
-                        <img onClick={(event) => toggleMenu(event, 'chatroom_name_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'chatroom_name_color_set' ? "/setIcon.png" : "/notSetIcon.png"} />
                     </div>
 
                     <div className='chatroom_receive_bg1_color_set'>

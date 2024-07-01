@@ -54,8 +54,6 @@ function CharacterChatroom() {
     }, []);
 
     const [characterChatroomBgColor, setCharacterChatroomBgColor] = useState(localStorage.getItem('characterChatroomBgColor') || '#ffffff');
-    const [characterChatroomTitleColor, setCharacterChatroomTitleColor] = useState(localStorage.getItem('characterChatroomTitleColor') || '#000000');
-    const [characterChatroomNameColor, setCharacterChatroomNameColor] = useState(localStorage.getItem('characterChatroomNameColor') || '#000000');
     const [characterChatroomReceiveBg1Color, setCharacterChatroomReceiveBg1Color] = useState(localStorage.getItem('characterChatroomReceiveBg1Color') || '#ffffff');
     const [characterChatroomReceiveBg2Color, setCharacterChatroomReceiveBg2Color] = useState(localStorage.getItem('characterChatroomReceiveBg2Color') || '#ffffff');
     const [characterChatroomReceiveTextColor, setCharacterChatroomReceiveTextColor] = useState(localStorage.getItem('characterChatroomReceiveTextColor') || '#000000');
@@ -80,16 +78,6 @@ function CharacterChatroom() {
     const handleChangeCharacterChatroomBgColor = (color) => {
         setCharacterChatroomBgColor(color.hex);
         localStorage.setItem('characterChatroomBgColor', color.hex);
-    }
-
-    const handleChangeCharacterChatroomTitleColor = (color) => {
-        setCharacterChatroomTitleColor(color.hex);
-        localStorage.setItem('characterChatroomTitleColor', color.hex);
-    }
-
-    const handleChangeCharacterChatroomNameColor = (color) => {
-        setCharacterChatroomNameColor(color.hex);
-        localStorage.setItem('characterChatroomNameColor', color.hex);
     }
 
     const handleChangeCharacterChatroomReceiveBg1Color = (color) => {
@@ -258,8 +246,6 @@ function CharacterChatroom() {
             await convertSvgToPng(Target_character_chatroom_bg_color_cmp, { characterChatroomBgColor }, 'chatroomBgImage@3x.png');
 
             localStorage.setItem('characterChatroomBgColor', characterChatroomBgColor);
-            localStorage.setItem('characterChatroomTitleColor', characterChatroomTitleColor);
-            localStorage.setItem('characterChatroomNameColor', characterChatroomNameColor);
             localStorage.setItem('characterChatroomReceiveTextColor', characterChatroomReceiveTextColor);
             localStorage.setItem('characterChatroomReceiveUnreadTextColor', characterChatroomReceiveUnreadTextColor);
             localStorage.setItem('characterChatroomSendTextColor', characterChatroomSendTextColor);
@@ -288,18 +274,6 @@ function CharacterChatroom() {
                                 <>
                                     <div className='colorpick-info-title'>채팅방 배경 색상</div>
                                     <SketchPicker color={characterChatroomBgColor} onChangeComplete={handleChangeCharacterChatroomBgColor} />
-                                </>
-                            )}
-                            {activeButton === 'character_chatroom_title_color_set' && (
-                                <>
-                                    <div className='colorpick-info-title'>채팅방 타이틀 색상</div>
-                                    <SketchPicker color={characterChatroomTitleColor} onChangeComplete={handleChangeCharacterChatroomTitleColor} />
-                                </>
-                            )}
-                            {activeButton === 'character_chatroom_name_color_set' && (
-                                <>
-                                    <div className='colorpick-info-title'>친구 이름 색상</div>
-                                    <SketchPicker color={characterChatroomNameColor} onChangeComplete={handleChangeCharacterChatroomNameColor} />
                                 </>
                             )}
                             {activeButton === 'character_chatroom_receive_bg1_color_set' && (
@@ -357,11 +331,11 @@ function CharacterChatroom() {
                     </div>
 
                     <div className='character_chatroom_title_color'>
-                        <Character_chatroom_title_color_cmp characterChatroomTitleColor={characterChatroomTitleColor} />
+                        <Character_chatroom_title_color_cmp characterChatroomTitleColor="#191919" />
                     </div>
 
                     <div className='character_chatroom_name_color'>
-                        <Character_chatroom_name_color_cmp characterChatroomNameColor={characterChatroomNameColor} />
+                        <Character_chatroom_name_color_cmp characterChatroomNameColor="#6D6D6D" />
                     </div>
 
                     <div className='character_chatroom_receive_bg1_color'>
@@ -407,13 +381,6 @@ function CharacterChatroom() {
                         <img onClick={() => toggleMenu('character_chatroom_bg_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'character_chatroom_bg_color_set' ? '/setIcon.png' : '/notSetIcon.png'} />
                     </div>
 
-                    <div className='character_chatroom_title_color_set'>
-                        <img onClick={() => toggleMenu('character_chatroom_title_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'character_chatroom_title_color_set' ? '/setIcon.png' : '/notSetIcon.png'} />
-                    </div>
-
-                    <div className='character_chatroom_name_color_set'>
-                        <img onClick={() => toggleMenu('character_chatroom_name_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'character_chatroom_name_color_set' ? '/setIcon.png' : '/notSetIcon.png'} />
-                    </div>
 
                     <div className='character_chatroom_receive_bg1_color_set'>
                         <img onClick={() => toggleMenu('character_chatroom_receive_bg1_color_set')} alt='채팅방1 색상 버튼 미선택' src={activeButton === 'character_chatroom_receive_bg1_color_set' ? '/setIcon.png' : '/notSetIcon.png'} />
