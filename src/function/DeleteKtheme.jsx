@@ -8,13 +8,14 @@ const DeleteKtheme = async () => {
         });
 
         if (response.ok) {
-            alert('ktheme files deleted successfully');
+            console.log('ktheme files deleted successfully');
+
         } else {
-            alert('Failed to delete ktheme files');
+            console.log('Failed to delete ktheme files');
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('Error deleting ktheme files');
+        console.log('Error deleting ktheme files');
     }
     };
 export default DeleteKtheme;
