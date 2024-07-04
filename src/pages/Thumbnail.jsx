@@ -23,7 +23,8 @@ function Thumbnail() {
         context.drawImage(canvas, 0, 0, 162, 162);
 
         const dataURL = resizedCanvas.toDataURL('image/png');
-        const response = await fetch('/saveThumbnail', {
+        const apiUrl = process.env.REACT_APP_API_URL;
+        const response = await fetch(`${apiUrl}/saveThumbnail`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
