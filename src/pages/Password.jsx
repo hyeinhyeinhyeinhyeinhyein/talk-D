@@ -193,8 +193,9 @@ function Password() {
             const resizedLockCanvas = resizeCanvas(lockCanvas, 132, 132);
             const lockDataUrl = resizedLockCanvas.toDataURL("image/png");
 
+            const apiUrl=process.env.REACT_APP_API_URL;
             // Send both images to the server
-            const response = await fetch('http://localhost:5000/upload', {
+            const response = await fetch(`${apiUrl}/upload`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

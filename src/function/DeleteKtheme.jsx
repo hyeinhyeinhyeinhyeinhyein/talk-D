@@ -2,8 +2,9 @@ import React from 'react';
 
 
 const DeleteKtheme = async () => {
+    const apiUrl=process.env.REACT_APP_API_URL;
     try {
-        const response = await fetch('http://localhost:5000/deleteKtheme', {
+        const response = await fetch(`${apiUrl}/deleteKtheme`, {
             method: 'DELETE',
         });
 

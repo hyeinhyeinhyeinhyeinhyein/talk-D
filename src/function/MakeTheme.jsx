@@ -36,8 +36,9 @@ const MakeTheme = async () => {
     };
 
     // 쿼리 문자열 생성
+    const apiUrl=process.env.REACT_APP_API_URL;
     const params = new URLSearchParams(themeSettings).toString();
-    const response = await fetch(`http://localhost:5000/Step3?${params}`);
+    const response = await fetch(`${apiUrl}/Step3?${params}`);
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');

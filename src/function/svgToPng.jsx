@@ -4,8 +4,9 @@ export const svgToPng = async (blob, filename) => {
     const formData = new FormData();
     formData.append('file', blob, filename);
 
+    const apiUrl=process.env.REACT_APP_API_URL;
     try {
-        await axios.post('http://localhost:5000/tabbar', formData, {
+        await axios.post(`${apiUrl}/tabbar`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
