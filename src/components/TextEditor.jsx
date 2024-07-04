@@ -86,26 +86,7 @@ const TextEditor = ({ onSave }) => {
             <button onClick={handleSaveClick} className="save-button">저장</button>
             <div className="editor-toolbar">
                 <select className="font-family-select" value={fontFamily} onChange={handleFontFamilyChange}>
-                    <option value="Noto Sans KR Bold">Noto Sans KR Bold</option>
-                    <option value="Noto Sans KR Black">Noto Sans KR Black</option>
-                    <option value="Noto Sans KR ExtraBold">Noto Sans KR ExtraBold</option>
-                    <option value="Noto Sans KR ExtraLight">Noto Sans KR ExtraLight</option>
-                    <option value="Noto Sans KR Light">Noto Sans KR Light</option>
                     <option value="Noto Sans KR Medium">Noto Sans KR Medium</option>
-                    <option value="Noto Sans KR Regular">Noto Sans KR Regular</option>
-                    <option value="Noto Sans KR SemiBold">Noto Sans KR SemiBold</option>
-                    <option value="Noto Sans KR Thin">Noto Sans KR Thin</option>
-                    <option value="나눔손글씨붓">나눔손글씨붓</option>
-                    <option value="야놀자 야체 Bold">야놀자 야체 Bold</option>
-                    <option value="야놀자 야체 Regular">야놀자 야체 Regular</option>
-                    <option value="온글잎 류류체">온글잎 류류체</option>
-                    <option value="유앤피플 고딕 KS">유앤피플 고딕 KS</option>
-                    <option value="유앤피플 고딕 UNI">유앤피플 고딕 UNI</option>
-                    <option value="중나좋체 Light">중나좋체 Light</option>
-                    <option value="중나좋체 Medium">중나좋체 Medium</option>
-                    <option value="Adultkid">Adultkid</option>
-                    <option value="BagelFatOne-Regular">BagelFatOne-Regular</option>
-                    <option value="MoiraiOne-Regular">MoiraiOne-Regular</option>
                 </select>
             </div>
             <div className="editor-controls">
