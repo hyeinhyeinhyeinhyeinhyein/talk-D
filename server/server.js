@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-//const port = 5000;
+const port = 5000;
 
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(cors());
@@ -30,5 +30,5 @@ app.use('/saveThumbnail', saveThumbnailRoute);
 app.use('/deleteKtheme', deleteKthemeRoute);
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
