@@ -17,27 +17,34 @@
 <br>
 <br>
 
-**[1] 카카오톡 테마명을 설정할 수 있습니다. <br>**
-이곳의 설정한 이름대로 최종 .ktheme 파일을 다운로드할 수 있습니다.
+**[0] 초기 화면에서 만들고 싶은 테마 종류를 선택합니다. <br>**
+기본 말풍선을 원한다면 왼쪽, 이미지 말풍선을 원한다면 오른쪽을 선택합니다. 
 ![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/08ef59c5-74c1-4fc6-9e31-ea26debf4bf1)
 <br>
 <br>
 
+**[1] 카카오톡 테마명을 설정할 수 있습니다. <br>**
+이곳의 설정한 이름대로 최종 .ktheme 파일을 다운로드할 수 있습니다.
+![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/63bd7773-b19e-4aac-8a09-16e5e45a27c3)
+<br>
+<br>
+
+
 **[2] 카카오톡 더보기탭 > 설정 > 테마에서 확인할 수 있는 테마 미리보기용 썸네일을 제작할 수 있습니다. <br>**
 미니 그림판으로써 기본 도형, 기본 아이콘, 이미지, 텍스트를 추가하여 썸네일을 꾸밀 수 있습니다.
-![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/63bd7773-b19e-4aac-8a09-16e5e45a27c3)
+![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/6415b039-ddc1-4bdf-8ce7-0db1ae8331f7)
 <br>
 <br>
 
 **[3] 비밀번호창을 디자인 할 수 있습니다.<br>**
 관련된 텍스트의 색상을 변경할 수 있고, 비밀번호 아이콘을 변경할 수 있습니다. (기본 아이콘 디자인 변경/이미지 추가 가능)
-![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/6415b039-ddc1-4bdf-8ce7-0db1ae8331f7)
+![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/31f0f8bc-278c-46ef-8572-31c7b2764a17)
 <br>
 <br>
 
 **[4] 친구목록 디자인 요소의 색상을 바꿀 수 있습니다.<br>**
 관련된 텍스트의 색상을 변경할 수 있습니다.
-![image](https://github.com/hyeinhyeinhyeinhyeinhyein/talk-D/assets/108918554/31f0f8bc-278c-46ef-8572-31c7b2764a17)
+![image](https://github.com/user-attachments/assets/d5dc2297-6370-4745-b857-afcc34c1218b)
 <br>
 <br>
 
